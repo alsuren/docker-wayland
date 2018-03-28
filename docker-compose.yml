@@ -1,0 +1,10 @@
+wayland:
+  hostname: wayland
+  build: .
+  command: bash
+  ports:
+    - '5901:5901'
+  volumes:
+    # Persistent bash history. Could probably be done by just mounting
+    # /root/.bash_history somewhere to be honest.
+    - './root:/root'
